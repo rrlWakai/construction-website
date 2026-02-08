@@ -46,14 +46,14 @@ const testimonials: Testimonial[] = [
     role: "Business Owner",
     quote:
       "They handled our fit-out professionally—clean execution, no surprises.",
-    img: "/testimonials/sarah.jpg",
+    img: "/sarah.jpg",
   },
   {
     name: "David R.",
     role: "Project Manager",
     quote:
       "Reliable team and strong attention to detail from start to turnover.",
-    img: "/testimonials/david.jpg",
+    img: "/david.jpg",
   },
 ];
 
