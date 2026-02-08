@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+/* Theme tokens */
+:root {
+  --bg: 10 12 16;
+  --ink: 245 245 245;
+  --muted: 180 185 195;
+  --accent: 250 204 21;
+
+  /* section base tones (RGB) */
+  --tone-hero-a: 22 26 32;
+  --tone-hero-b: 14 16 20;
+
+  --tone-services-a: 18 20 26;
+  --tone-services-b: 14 16 20;
+
+  --tone-projects-a: 14 16 20;
+  --tone-projects-b: 10 12 16;
+
+  --tone-testimonials-a: 16 18 22;
+  --tone-testimonials-b: 14 16 20;
+
+  --tone-contact-a: 12 14 18;
+  --tone-contact-b: 8 10 14;
+}
+
+html, body { height: 100%; }
+body {
+  background: rgb(var(--bg));
+  color: rgb(var(--ink));
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Anchor offset under navbar */
+:target { scroll-margin-top: 110px; }
+
+/* Glass */
+.glass{
+  background: rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  /* backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px); */
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.35),
+    inset 0 1px 0 rgba(255,255,255,0.10);
+}
+
+.glass-soft{
+  background: rgba(255,255,255,0.075);
+  border: 1px solid rgba(255,255,255,0.13);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow:
+    0 16px 50px rgba(0,0,0,0.30),
+    inset 0 1px 0 rgba(255,255,255,0.10);
+}
+
+/* ===== Background System ===== */
+
+/* Base gradient per section (use on <section>) */
+.section-hero {
+  background: linear-gradient(180deg,
+    rgb(var(--tone-hero-a)) 0%,
+    rgb(var(--tone-hero-b)) 100%
+  );
+}
+.section-services {
+  background: linear-gradient(180deg,
+    rgb(var(--tone-services-a)) 0%,
+    rgb(var(--tone-services-b)) 100%
+  );
+}
+.section-projects {
+  background: linear-gradient(180deg,
+    rgb(var(--tone-projects-a)) 0%,
+    rgb(var(--tone-projects-b)) 100%
+  );
+}
+.section-testimonials {
+  background: linear-gradient(180deg,
+    rgb(var(--tone-testimonials-a)) 0%,
+    rgb(var(--tone-testimonials-b)) 100%
+  );
+}
+.section-contact {
+  background: linear-gradient(180deg,
+    rgb(var(--tone-contact-a)) 0%,
+    rgb(var(--tone-contact-b)) 100%
+  );
+}
+
+/* Film grade overlays */
+.section-grade {
+  background: linear-gradient(180deg,
+    rgba(0,0,0,0.18) 0%,
+    rgba(0,0,0,0.40) 70%,
+    rgba(0,0,0,0.55) 100%
+  );
+}
+
+.section-vignette {
+  background: radial-gradient(circle at 50% 40%,
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,0.55) 78%
+  );
+}
+
+/* Optional: keep seams invisible between sections */
+.section-seam {
+  background: linear-gradient(180deg,
+    rgba(0,0,0,0.00) 0%,
+    rgba(0,0,0,0.12) 50%,
+    rgba(0,0,0,0.20) 100%
+  );
+}
