@@ -39,7 +39,7 @@ const testimonials: Testimonial[] = [
     role: "Homeowner",
     quote:
       "Clear timelines, honest pricing, and the finish quality was exactly what we hoped for.",
-    img: "/testimonials/john.jpg",
+    img: "/john.jpg",
   },
   {
     name: "Sarah L.",
